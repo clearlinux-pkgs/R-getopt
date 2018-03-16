@@ -11,6 +11,7 @@ Summary  : C-Like 'getopt' Behavior
 Group    : Development/Tools
 License  : GPL-2.0 GPL-2.0+
 BuildRequires : clr-R-helpers
+Provides: /path/to/Rscript
 
 %description
 ``#!'' shebang scripts that accept short and long flags/options.
