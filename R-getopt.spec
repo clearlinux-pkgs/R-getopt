@@ -4,7 +4,7 @@
 #
 Name     : R-getopt
 Version  : 1.20.2
-Release  : 17
+Release  : 18
 URL      : https://cran.r-project.org/src/contrib/getopt_1.20.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/getopt_1.20.2.tar.gz
 Summary  : C-Like 'getopt' Behavior
@@ -26,10 +26,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552762349
+export SOURCE_DATE_EPOCH=1552764451
 
 %install
-export SOURCE_DATE_EPOCH=1552762349
+export SOURCE_DATE_EPOCH=1552764451
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -70,6 +70,7 @@ R CMD check --no-manual --no-examples --no-codoc  getopt || :
 
 %files
 %defattr(-,root,root,-)
+%exclude /usr/lib64/R/library/getopt/exec/example.R
 /usr/lib64/R/library/getopt/DESCRIPTION
 /usr/lib64/R/library/getopt/INDEX
 /usr/lib64/R/library/getopt/Meta/Rd.rds
@@ -83,7 +84,6 @@ R CMD check --no-manual --no-examples --no-codoc  getopt || :
 /usr/lib64/R/library/getopt/R/getopt
 /usr/lib64/R/library/getopt/R/getopt.rdb
 /usr/lib64/R/library/getopt/R/getopt.rdx
-/usr/lib64/R/library/getopt/exec/example.R
 /usr/lib64/R/library/getopt/help/AnIndex
 /usr/lib64/R/library/getopt/help/aliases.rds
 /usr/lib64/R/library/getopt/help/getopt.rdb
