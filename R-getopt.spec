@@ -4,37 +4,38 @@
 #
 Name     : R-getopt
 Version  : 1.20.3
-Release  : 29
+Release  : 30
 URL      : https://cran.r-project.org/src/contrib/getopt_1.20.3.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/getopt_1.20.3.tar.gz
 Summary  : C-Like 'getopt' Behavior
 Group    : Development/Tools
 License  : GPL-2.0 GPL-2.0+
 BuildRequires : buildreq-R
-BuildRequires : util-linux
 
 %description
-getopt
-======
-[![CRAN Status Badge](https://www.r-pkg.org/badges/version/getopt)](https://cran.r-project.org/package=getopt)
+``#!'' shebang scripts that accept short and long flags/options.
+    Many users will prefer using instead the packages optparse or argparse
+    which add extra features like automatically generated help option and usage,
+    support for default values, positional argument support, etc.
 
 %prep
 %setup -q -c -n getopt
+cd %{_builddir}/getopt
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1571837153
+export SOURCE_DATE_EPOCH=1589534338
 
 %install
-export SOURCE_DATE_EPOCH=1571837153
+export SOURCE_DATE_EPOCH=1589534338
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
