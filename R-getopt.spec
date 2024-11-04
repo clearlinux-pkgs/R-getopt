@@ -5,7 +5,7 @@
 #
 Name     : R-getopt
 Version  : 1.20.4
-Release  : 54
+Release  : 55
 URL      : https://cran.r-project.org/src/contrib/getopt_1.20.4.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/getopt_1.20.4.tar.gz
 Summary  : C-Like 'getopt' Behavior
